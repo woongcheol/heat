@@ -15,8 +15,14 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
+# from django.conf import global_settings
+# from heat import settings
+from django.conf import settings
 
 urlpatterns = [
     path('myadmin/', admin.site.urls),
     path('instagram/', include('instagram.urls')),
 ]
+
+settings.MEDIA_URL
+settings.MEDIA_ROOT
